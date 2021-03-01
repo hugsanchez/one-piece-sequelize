@@ -25,7 +25,7 @@ router.get('/', async(req,res,next) => {
                             <div>
                                 <ul ${currCrew.id ===2 ? 'class="middle"' : ''}>${currCrew.name.toUpperCase()}
                                 <br/>
-                                <a class='links' href='/${currCrew.name}/${currCrew.captainId}'>ADD NAKAMA </a>
+                                <a class='links' href='/addNakama/${currCrew.captainId}'>ADD NAKAMA </a>
                                 
                                 <li>(CAPTAIN: ${currCrew.captain.name.toUpperCase()})</li>
                                 <div class='money'>Bounty: $${currCrew.captain.bounty}</div>
@@ -52,7 +52,7 @@ router.get('/', async(req,res,next) => {
     }
 })
 
-router.get('/:id/:id', (req,res,next) => {
+router.get('/addNakama/:id', (req,res,next) => {
     try{
         res.send(`
         <html>
