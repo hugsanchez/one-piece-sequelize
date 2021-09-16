@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.use(require('method-override')('_method'));
 app.use(express.urlencoded({extended:false}))
-app.use('/', require('./routes'));
+app.use('/', require('./routes.js'));
 
 app.use('/styles.css', express.static(path.join(__dirname, 'styles.css')));
 
